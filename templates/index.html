@@ -1,20 +1,37 @@
-
 {% extends "base.html" %}
 
 {% block main_content %}
 
-    <h1>Welcome to the House Of Coffee!</h1>
-    {% if "user_id" not in session %}
-        <p>Become a member now! <a href="{{ url_for('register') }}">Register Now!</a></p>
-        <p>If you're already a member:   <a href="{{ url_for('login') }}">Login here</a></p>
-    
-    {% else %}
-        <p>Welcome back!</p>
+<h1>Welcome to the House Of Coffee!</h1>
+<div class="flexLeft">
+    <img src="static/kenny-new-coffee.jpg" alt="Coffee Cup" width="150" height="150" class="images">
 
-    {% endif %}
-    <p>Welcome to the House of Coffee, where we can offer you our finest homemade brews!</p>
-    <p>Looking for a real coffee right now? <a href="{{ url_for('orders') }}">Click here!</a> </p>
-    <!-- ideas for homepage:
+    <div class="flexRight">
+        <p>
+            Welcome to the House of Coffee, where we can offer you our finest homemade brews!
+        </p>
+        <a class="orderButton" href="{{ url_for('orders') }}">Click here!</a>
+    </div>
+</div>
+{% if "user_id" not in session %}
+<div class="flexLeft">
+    <div class="flexRight">
+        <div id="Left">
+            <p>Become a member now! <a href="{{ url_for('register') }}">Register Now!</a></p>
+            <br>
+            <p>If you're already a member: <a href="{{ url_for('login') }}">Login here</a></p>
+        </div>
+    </div>
+    <img src="static/unsplash-new-coffee.jpg" alt="Coffeeeeee" width="150" height="150" class="images">
+</div>
+
+{% else %}
+<p>Welcome back!</p>
+
+{% endif %}
+
+
+<!-- ideas for homepage:
 vague nav?
 login/logout system
 Points / loyalty system if you purchase a certain amount / order over ten coffees.
@@ -24,4 +41,3 @@ main homepage is login. then can add to cart, order coffee straight away, rights
 
 
 {% endblock %}
-
