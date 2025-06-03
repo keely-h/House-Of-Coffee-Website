@@ -5,6 +5,11 @@
 <p>Looking to order a coffee? Look no further!</p>
 <h1>Our Menu: </h1>
 <table>
+    <tr>
+        <th><u>Coffee</u></th>
+        <th><u>Price</u></th>
+        <th></th>
+    </tr>
     {% for coffee in coffees %}
         <tr>
             <td>{{ coffee["name"] }}</td>
