@@ -1,0 +1,105 @@
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+* {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #1c1612;
+
+}
+
+header {
+    width: 60%;
+    margin: 0 auto;
+    /* this centers it */
+    padding: 10px;
+    border-radius: 10px;
+    /* font-size: large; */
+    color: #422d1f;
+    background-color: rgb(240, 218, 189);
+    display: flex;
+    /* make header a flex container */
+    align-items: center;
+    /* vertically center img + h1 */
+    justify-content: space-between;
+    /* horizontally center everything */
+    gap: 0.5rem;
+}
+
+header .headerLogo {
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #422d1f;
+}
+
+h1 img {
+    border-radius: 50%;
+}
+
+header .rightSide {
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('nathanDumlaoUnsplash.jpg');
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+a {
+    color: #5c3e28;
+}
+
+a:hover {
+    color: rgb(32, 22, 6);
+}
+
+nav {
+    /* background-color: rgb(183, 168, 143); */
+    padding: 8px;
+}
+
+nav p {
+    background-color: transparent;
+}
+
+nav a {
+    color: #7d5e49;
+    padding: 5px;
+}
+
+
+header .rightSide p {
+    text-align: left;
+    padding: 5px;
+    margin: 0;
+}
+
+/* images are from unsplashed, free for use., nathan dumlao. */
